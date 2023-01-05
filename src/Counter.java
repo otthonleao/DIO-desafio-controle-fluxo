@@ -20,10 +20,10 @@ public class Counter {
 				int number1 = scan.nextInt();
 				System.out.println("Type the second number:");
 				int number2 = scan.nextInt();
-				scan.close();
 
 				count(number1, number2);
 				restart = false;
+				scan.close();
 
 			} catch (InputMismatchException e) {
 				headerTerminal(false);
@@ -46,7 +46,6 @@ public class Counter {
 				number1++;
 			}
 		} else {
-			headerTerminal(false);
 			throw new IllegalArgumentException();
 		}
 	}
